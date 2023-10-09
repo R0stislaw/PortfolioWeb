@@ -163,24 +163,3 @@ var contactSelection = document.getElementById("contactSelection");
 contactButton.addEventListener("click", function () {
   contactSelection.scrollIntoView({ behavior: "smooth" });
 });
-
-// Копіювання номеру телефона
-var phoneParagraph = document.getElementById("phone");
-phoneParagraph.addEventListener("click", function () {
-  var clipboard = document.createElement("textarea");
-  clipboard.value = phoneParagraph.textContent;
-  document.body.appendChild(clipboard);
-
-  clipboard.select();
-  clipboard.setSelectionRange(0, 99999);
-
-  document.execCommand("copy");
-
-  document.body.removeChild(clipboard);
-
-  phoneParagraph.textContent = "Copied!";
-
-  setTimeout(function () {
-    phoneParagraph.textContent = "+380-99-999-9999";
-  }, 1000);
-});
