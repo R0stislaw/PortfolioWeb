@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./images/icon-page.png">
     <title>Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -15,12 +13,7 @@
       <div class="overlay"></div>
       <header>
         <div class="content-wrap d-flex">
-          <div class="logo">Portfolio</div>
-          <div class="content-header">
-            <p>Hi, It`s Hrybyk Rostislaw</p>
-            <p>Designer from Ivano-Frankivsk</p>
-            <a href="https://codepen.io/R0stislaw">Lastest works</a>
-          </div>
+          <div class="logo">Portfolio</div>  
           <nav class="main-menu">
             <div id="iconWrap" class="icons">
               <i id="iconOpen" class="fa-solid fa-bars"></i>
@@ -36,8 +29,18 @@
           </nav>
         </div>
       </header>
+      <main>
+        <div class="content-wrap">
+          <div class="content-header">
+            <p>Hi, It`s Hrybyk Rostislaw</p>
+            <p>Designer from Ivano-Frankivsk</p>
+            <a href="https://codepen.io/R0stislaw">Lastest works</a>
+          </div>
+        </div>
+        </main>
     </div>
-    <div class="text-about">
+    <section>
+    <div class="text-about content-wrap">
       <p id="aboutSection">About</p>
       <p>
         Hello! My name is Rostislav, and I am a beginner in the field of web design. My goal is to create attractive and functional websites that foster a better user community and help improve the internet.
@@ -45,10 +48,10 @@
          <p>My main goals are further improvement of my skills in web design, cooperation with interesting clients and development in this field. I am always open to new opportunities and challenges that will help me grow as a professional.
          I am always happy to cooperate and discuss new projects. If you are interested in my work or have any questions, please contact me for help.</p>
       
-    </div>
-    <div class="text-skill" id="skillSection">Skills</div>
-    <br />
-    <div class="text-skills">
+    </div></section>
+    <section>
+    <div class="text-skill content-wrap" id="skillSection">Skills</div>
+    <div class="text-skills content-wrap">
       <div class="skill-firstblock">
         <img src="./images/myphoto.jpg" alt="" />
       </div>
@@ -64,7 +67,7 @@
       </div>
 
       <div class="skill-thirdblock">
-        <p>UI/UX Engieer, Developer</p>
+        <p>UI/UX Engieer, Dev</p>
         <div class="skill-bar">
           <div class="skill-level" style="width: 10%">10%</div>
         </div>
@@ -72,35 +75,31 @@
         <div class="skill-bar">
           <div class="skill-level" style="width: 15%">15%</div>
         </div>
-        <p>Adobe PS, AI, Figma</p>
+        <p>Adobe, AI, Figma</p>
         <div class="skill-bar">
           <div class="skill-level" style="width: 10%">10%</div>
         </div>
         <p>HTML, CSS, JS</p>
       </div>
     </div>
-    <div class="text-portfolio" id="portfolioSection"><p>Portfolio</p></div>
+    </section>
+    <section>
+    <div class="text-portfolio content-wrap" id="portfolioSection"><p>Portfolio</p></div>
     <div class="title-slider">Solved web design problems</div>
     <div class="slider-container" data-opened="false">
       <div class="slider">
         <div class="slider-item">
           <img src="./images/bg-cards.jpg" alt="Зображення 1" />
           <div class="slider-content">
+            
             <a>Лабораторна №1</a>
-            <a
-              href="https://r0stislaw.github.io/LR1/ЛР1.1/index1.html"
-              target="_blank"
-              >Завдання 1</a
-            >
+            <a href="https://r0stislaw.github.io/LR1/ЛР1.1/index1.html" target="_blank">Завдання 1</a>
             <a
               href="https://r0stislaw.github.io/LR1/ЛР1.1/index2.html"
-              target="_blank"
-              >Завдання 2</a
-            >
+              target="_blank">Завдання 2</a>
             <a
               href="https://r0stislaw.github.io/LR1/ЛР1.1/index3.html"
-              target="_blank"
-              >Завдання 3</a
+              target="_blank">Завдання 3</a
             >
             <a
               href="https://r0stislaw.github.io/LR1/ЛР1.1/index4.html"
@@ -114,22 +113,19 @@
             >
             <a
               href="https://r0stislaw.github.io/LR1/ЛР1.1/index6.html"
-              target="_blank"
-              >Завдання 6</a
+              target="_blank">Завдання 6</a
             >
             <a
               href="https://r0stislaw.github.io/LR1/ЛР1.1/index7.html"
-              target="_blank"
-              >Завдання 7</a
-            >
-            <a
+              target="_blank">Завдання 7</a>
+            <a class="back-link"
               href="https://r0stislaw.github.io/LR1/ЛР1.1/index8.html"
-              target="_blank"
-              >Завдання 8</a
+              target="_blank">Завдання 8</a
             >
-          </div>
+          
         </div>
-        <div class="slider-item">
+        </div>
+        <!-- <div class="slider-item">
           <img src="./images/bg-cards.jpg" alt="Зображення 2" />
           <div class="slider-content">
             <a href="#">See soon!</a>
@@ -141,18 +137,27 @@
             <a href="#">See soon!</a>
             <a href="#">See soon!</a>
           </div>
-        </div>
+        </div> -->
         <div class="slider-item">
           <img src="./images/bg-cards.jpg" alt="Зображення 3" />
           <div class="slider-content">
-            <a href="#">See soon!</a>
-            <a href="#">See soon!</a>
-            <a href="#">See soon!</a>
-            <a href="#">See soon!</a>
-            <a href="#">See soon!</a>
-            <a href="#">See soon!</a>
-            <a href="#">See soon!</a>
-            <a href="#">See soon!</a>
+            <a>Лабораторна №2</a>
+            <a href="https://r0stislaw.github.io/LR3-WEB/LR3/index.html?authuser=0" target="_blank"
+              >Завдання 1</a
+            >
+            <a
+              href="https://r0stislaw.github.io/LR3-WEB/LR3/index2.html?authuser=0"
+              target="_blank"
+              >Завдання 2</a
+            >
+            <a
+              href="https://r0stislaw.github.io/LR3-WEB/LR3/index3.html?authuser=0"
+              target="_blank"
+              >Завдання 3</a
+            >
+            <a
+              href="https://r0stislaw.github.io/LR3-WEB/LR3/index4.html?authuser=0"
+              target="_blank">Завдання 4</a>
           </div>
         </div>
       </div>
@@ -161,8 +166,9 @@
         <span class="slide-number">1</span>
         <i class="fa fa-chevron-right next-btn"></i>
       </div>
-    </div>
-    <div class="text-get-in-touch column-text" id="contactSelection">Get in touch</div>
+    </div></section>
+    <footer>
+    <div class="text-get-in-touch column-text content-wrap" id="contactSelection">Get in touch</div>
     <div class="footer-text">
       <div class="footer-first-block">
         <p><a href="https://dribbble.com/Hrybyk">Dribble</a></p>
@@ -183,7 +189,7 @@
       </div>
     </div>
     <i class="button-page-up fa-solid fa-chevron-up"></i>
-
+  </footer>
     <script src="script/script.js"></script>
   </body>
 </html>

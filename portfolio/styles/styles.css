@@ -6,6 +6,9 @@
   font-weight: 400;
   src: url("../fonts/montserrat-v26-latin-regular.woff2") format("woff2");
 }
+html{
+  font-size: 16px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +32,7 @@ ol {
 }
 .header-block header {
   position: relative;
+  height: 12%;
   z-index: 10;
 }
 .overlay {
@@ -39,38 +43,43 @@ ol {
   height: 100%;
   background: rgba(198, 108, 73, 0.3);
 }
+
 header .content-wrap .logo {
   order: 2;
 }
-.icons {
-  width: 100%;
-  color: #fff;
+header .content-wrap{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 2.2rem 1rem 0 0;
+  height: 100%;
+
+}
+
+.icons {
+  color: #fff;
+  display: flex;  
+  align-items: center;
+}
+#iconsWrap.icons{
+  width: 2rem;
 }
 .logo {
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
   font-size: 3rem;
   font-family: "Montserrat";
-  padding-top: 2rem;
-  padding-left: 4rem;
-  position: absolute;
   color: #fff;
   transition: margin-top 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 .main-menu {
+  width: 90%;
   display: flex;
-  margin-top: 20px;
   position: absolute;
 }
 .menu-list {
-  /* max-width: 100%px; */
-  padding-top: 2.2rem;
-  background: transparent;
+  width: 100%;
   display: flex;
+  padding-left: 10px;
+  background: transparent;
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
@@ -78,7 +87,11 @@ header .content-wrap .logo {
   opacity: 1;
   transform: translateY(0%);
 }
-.menu-list li:not(:last-child) {
+/* .menu-list li:not(:last-child) {
+  margin-right: 10px;
+} */
+
+.menu-list li:not(:last-child){
   margin-right: 10px;
 }
 .menu-list a {
@@ -88,9 +101,10 @@ header .content-wrap .logo {
   text-decoration: none;
 }
 .content-wrap {
-  padding: 0 20px;
-  /* max-width: 100%px; */
+  position: relative;
+  padding: 0 1.5rem;
   margin: 0 auto;
+  z-index: 10;
 }
 .d-flex {
   display: flex;
@@ -137,14 +151,12 @@ header .content-wrap .logo {
 .text-about p {
   display: flex;
   justify-content: center;
-  margin: 0 1.5rem;
   font-family: "Montserrat";
 }
 
 .skill-firstblock img {
   width: 224px;
   height: 218px;
-  margin: 0 1.5rem;
 }
 .text-skill {
   display: flex;
@@ -154,7 +166,6 @@ header .content-wrap .logo {
   font-family: "Montserrat";
   font-size: 2rem;
   font-weight: bold;
-  margin: 0 1.5rem;
 }
 .text-skills {
   display: grid;
@@ -280,8 +291,15 @@ header .content-wrap .logo {
 }
 .back-rotate {
   transform: rotateY(180deg) scale(1);
+  
 }
-
+/* .tasks-decided{
+  height: 100%;
+  display: none;
+} */
+/* .slider-item back-rotate .tasks-decided{
+  display: flexbox;
+} */
 .text-portfolio {
   display: flex;
   justify-content: center;
@@ -290,7 +308,6 @@ header .content-wrap .logo {
   font-family: "Montserrat";
   font-size: 2rem;
   font-weight: bold;
-  margin: 0 1.5rem;
 }
 .title-slider {
   display: flex;
@@ -300,7 +317,6 @@ header .content-wrap .logo {
   font-family: "Montserrat";
   font-size: 1rem;
   font-weight: bold;
-  margin: 0 1.5rem;
 }
 /* слайдер */
 .slider-container {
@@ -385,7 +401,6 @@ header .content-wrap .logo {
   font-family: "Montserrat";
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 0 6rem;
 }
 /* Футер */
 .footer-text {
@@ -468,41 +483,46 @@ header .content-wrap .logo {
 /* ДЛЯ ПК */
 @media screen and (min-width: 800px) {
   .logo {
-    display: flex;
-    padding-top: 2rem;
-    font-size: 3rem;
+    margin: 0;
+    width: 25%;
+
+    font-size: 2.5rem;
     padding-left: 0;
-    justify-content: left;
-    margin: 0 4rem;
   }
   .icons {
     display: none;
   }
 
   .menu-list {
-    padding-top: 2.2rem;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background: transparent;
+    padding-left: 0;
     opacity: 1;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   }
   .main-menu {
     /* position: fixed; */
+    width: 90%;
+
     justify-content: right;
     opacity: 1;
-    width: 95%;
   }
-  .menu-list li {
+  /* .menu-list li {
     padding-right: 2rem;
-  }
+  } */
   .menu-list a {
     font-size: 1.5rem;
     color: #fff;
     text-decoration: none;
   }
+  .menu-list li:not(:last-child){
+    margin-right: 0;
+  }
   .content-wrap {
-    padding: 0 20px;
-    /* max-width: 100%px; */
-    margin: 0 auto;
+    padding: 0 3rem;
   }
   .d-flex {
     display: flex;
@@ -549,15 +569,15 @@ header .content-wrap .logo {
   .text-about p {
     display: flex;
     justify-content: center;
-    margin: 0 6rem;
+    
     font-size: 1.5rem;
     font-family: "Montserrat";
   }
 
   .skill-firstblock img {
-    width: 400px;
-    height: 400px;
-    margin: 0 6rem;
+    width: 100%;
+    height: auto;
+
   }
   .text-skill {
     display: flex;
@@ -567,8 +587,8 @@ header .content-wrap .logo {
     font-family: "Montserrat";
     font-size: 2rem;
     font-weight: bold;
-    margin: 0 6rem;
   }
+
   .text-skills {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -576,7 +596,8 @@ header .content-wrap .logo {
   }
 
   .skill-firstblock {
-    text-align: left;
+    
+    margin: auto 0;
   }
 
   .skill-firstblock p {
@@ -650,7 +671,7 @@ header .content-wrap .logo {
     font-family: "Montserrat";
     font-size: 2rem;
     font-weight: bold;
-    margin: 0 6rem;
+    
   }
   .title-slider {
     display: flex;
@@ -658,7 +679,6 @@ header .content-wrap .logo {
     font-family: "Montserrat";
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 0 6rem;
   }
   .slider-container {
     width: 600px;
@@ -721,6 +741,7 @@ header .content-wrap .logo {
     transform: rotateY(180deg);
     opacity: 1;
   }
+  
   .slider-controls {
     display: flex;
     margin-top: 2.5rem;
@@ -742,7 +763,7 @@ header .content-wrap .logo {
     font-family: "Montserrat";
     font-size: 2rem;
     font-weight: bold;
-    margin: 0 6rem;
+   
   }
   /* ФУТЕР */
   .footer-text {
@@ -786,39 +807,7 @@ header .content-wrap .logo {
     grid-column: 3 / 3;
   }
 
-  .footer-third-block p {
-    margin-bottom: 2.3rem;
-    font-size: 1rem;
-    font-family: "Montserrat";
-  }
-
-  .footer-third-block div {
-    margin-bottom: 2.2rem;
-  }
-  .column-text {
-    display: block;
-    font-family: "Montserrat";
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
   .button-page-up {
-    display: none;
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
     font-size: 2rem;
-    cursor: pointer;
-    animation: myAnimation 2s ease infinite;
-  }
-  @keyframes myAnimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
   }
 }

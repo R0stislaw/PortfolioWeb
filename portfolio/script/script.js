@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
       window.addEventListener("scroll", function () {
         if (document.documentElement.scrollTop > 300) {
           buttonPageUp.style.display = "block";
-        } else {
+        } else {  
           buttonPageUp.style.display = "none";
         }
       });
@@ -163,3 +163,4 @@ var contactSelection = document.getElementById("contactSelection");
 contactButton.addEventListener("click", function () {
   contactSelection.scrollIntoView({ behavior: "smooth" });
 });
+
